@@ -7,6 +7,30 @@
     right: 0;
     display: flex;
     align-items: center;
-    height: 60px;
+    justify-content: space-between;
     font-size: 12px;
+    padding: 14px 33px;
+}
+
+.navbar__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    cursor: pointer;
+}
+
+.navbar__go_to_github {
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-right: 36px;
+    font-size: 12px;
+    line-height: 16.5px;
+    font-weight: 400;
+}
+
+.navbar__git_logo {
+    margin-right: 10px;
 }

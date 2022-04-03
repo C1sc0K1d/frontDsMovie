@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesListComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() : void {}
+
+  previusMoviesList() : void {
+    console.log("Previus List");    
+  }
+
+  nextMoviesList() : void {
+    console.log("Next List");
+    
   }
 
 }
