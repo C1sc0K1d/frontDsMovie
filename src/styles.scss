@@ -3,6 +3,25 @@
     padding: 0;
     border: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.dsMovie__text_inputs:focus {
+    transform: scale(1.01);
+    box-shadow: 1px 1px 5px 1px gray;
+    outline: none;
+    transition: transform 0.3s;
+}
+
+html {
+    min-height: 100% !important;
+    height: 100%;
+}
+
+body {
+    min-height: calc(100% - 60px) !important;
+    height: calc(100% - 60px);
 }
 
 a,

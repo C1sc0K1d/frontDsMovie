@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movies-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesListComponent implements OnInit {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() : void {}
 
@@ -17,7 +18,10 @@ export class MoviesListComponent implements OnInit {
 
   nextMoviesList() : void {
     console.log("Next List");
-    
   }
+
+  selectMovie() : void {
+    this.router.navigate(['/movies/movie', 1])
+  }   
 
 }

@@ -3,7 +3,7 @@
     color: red;
     background-color: #C2C2C2;
     width: 100%;
-    height: auto;
+    min-height: 100%;
 }
 
 .movies-list__page_navigation {
@@ -50,4 +50,109 @@
     font-size: 40px;
     left: 13px;
     top: -6px;
+}
+
+.movies-list__movies {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.movies-list__movie_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+    height: 380px;
+    margin: 20px;
+    background-color: white;
+}
+
+.movies-list__movies_image {
+    width: 100%;
+    height: 146px;
+    background-color: #4D41C0;
+    display: flex;
+    align-items: center;
+}
+
+.movies-list__movie_datas {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.movies-list__movies_title {
+    margin: auto;
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+}
+
+.movies-list__movies_rating {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movies-list__ratting {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.movies-list__ratting:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.movies-list__ratting:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: default;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.movies-list__ratting:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.movies-list__ratting>input:checked~label {
+    color: #ffc700;
+}
+
+.movies-list__movies_buttons {
+    width: 180px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #4D41C0;
+    color: white;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    margin: 10px auto;
+}
+
+.movies-list__movies_buttons:hover {
+    transform: scale(1.01);
+    box-shadow: 1px 1px 2px 1px gray;
+}
+
+.movies-list__movies_buttons:active {
+    transform: scale(0.98);
+    box-shadow: 0 transparent;
 }
