@@ -9,157 +9,27 @@
     </button>
     </div>
     <div class="movies-list__movies">
-        <div class="movies-list__movie_container">
+        <div class="movies-list__movie_container" *ngFor="let movie of movies">
             <div class="movies-list__movies_image">
-                *****//image//*****
+                <img src={{movie.image}} alt={{movie.title}} class="movies-list__image" />
             </div>
             <div class="movies-list__movie_datas">
                 <div class="movies-list__movies_title">
-                    *****//title//*****
+                    {{ movie.title }}
                 </div>
                 <div class="movies-list__movies_rating">
                     <span>ratting</span>
                     <div class="movies-list__ratting">
-                        <input type="radio" id="star5" name="rate" value="5" [checked]="false" disabled />
-                        <label for="star5" title="text">5 stars</label>
-                        <input type="radio" id="star4" name="rate" value="4" [checked]="false" disabled />
-                        <label for="star4" title="text">4 stars</label>
-                        <input type="radio" id="star3" name="rate" value="3" [checked]="false" disabled />
-                        <label for="star3" title="text">3 stars</label>
-                        <input type="radio" id="star2" name="rate" value="2" [checked]="false" disabled />
-                        <label for="star2" title="text">2 stars</label>
-                        <input type="radio" id="star1" name="rate" value="1" [checked]="false" disabled />
-                        <label for="star1" title="text">1 star</label>
-                    </div>
-                </div>
-                <button class="movies-list__movies_buttons" (click)="selectMovie()"> avaliar </button>
-            </div>
-        </div>
-        <div class="movies-list__movie_container">
-            <div class="movies-list__movies_image">
-                *****//image//*****
-            </div>
-            <div class="movies-list__movie_datas">
-                <div class="movies-list__movies_title">
-                    *****//title//*****
-                </div>
-                <div class="movies-list__movies_rating">
-                    <span>ratting</span>
-                    <div class="movies-list__ratting">
-                        <input type="radio" id="star5" name="rate" value="5" [checked]="false" disabled />
-                        <label for="star5" title="text">5 stars</label>
-                        <input type="radio" id="star4" name="rate" value="4" [checked]="false" disabled />
-                        <label for="star4" title="text">4 stars</label>
-                        <input type="radio" id="star3" name="rate" value="3" [checked]="false" disabled />
-                        <label for="star3" title="text">3 stars</label>
-                        <input type="radio" id="star2" name="rate" value="2" [checked]="false" disabled />
-                        <label for="star2" title="text">2 stars</label>
-                        <input type="radio" id="star1" name="rate" value="1" [checked]="false" disabled />
-                        <label for="star1" title="text">1 star</label>
-                    </div>
-                </div>
-                <button class="movies-list__movies_buttons" (click)="selectMovie()"> avaliar </button>
-            </div>
-        </div>
-        <div class="movies-list__movie_container">
-            <div class="movies-list__movies_image">
-                *****//image//*****
-            </div>
-            <div class="movies-list__movie_datas">
-                <div class="movies-list__movies_title">
-                    *****//title//*****
-                </div>
-                <div class="movies-list__movies_rating">
-                    <span>ratting</span>
-                    <div class="movies-list__ratting">
-                        <input type="radio" id="star5" name="rate" value="5" [checked]="false" disabled />
-                        <label for="star5" title="text">5 stars</label>
-                        <input type="radio" id="star4" name="rate" value="4" [checked]="false" disabled />
-                        <label for="star4" title="text">4 stars</label>
-                        <input type="radio" id="star3" name="rate" value="3" [checked]="false" disabled />
-                        <label for="star3" title="text">3 stars</label>
-                        <input type="radio" id="star2" name="rate" value="2" [checked]="false" disabled />
-                        <label for="star2" title="text">2 stars</label>
-                        <input type="radio" id="star1" name="rate" value="1" [checked]="false" disabled />
-                        <label for="star1" title="text">1 star</label>
-                    </div>
-                </div>
-                <button class="movies-list__movies_buttons" (click)="selectMovie()"> avaliar </button>
-            </div>
-        </div>
-        <div class="movies-list__movie_container">
-            <div class="movies-list__movies_image">
-                *****//image//*****
-            </div>
-            <div class="movies-list__movie_datas">
-                <div class="movies-list__movies_title">
-                    *****//title//*****
-                </div>
-                <div class="movies-list__movies_rating">
-                    <span>ratting</span>
-                    <div class="movies-list__ratting">
-                        <input type="radio" id="star5" name="rate" value="5" [checked]="false" disabled />
-                        <label for="star5" title="text">5 stars</label>
-                        <input type="radio" id="star4" name="rate" value="4" [checked]="false" disabled />
-                        <label for="star4" title="text">4 stars</label>
-                        <input type="radio" id="star3" name="rate" value="3" [checked]="false" disabled />
-                        <label for="star3" title="text">3 stars</label>
-                        <input type="radio" id="star2" name="rate" value="2" [checked]="false" disabled />
-                        <label for="star2" title="text">2 stars</label>
-                        <input type="radio" id="star1" name="rate" value="1" [checked]="false" disabled />
-                        <label for="star1" title="text">1 star</label>
-                    </div>
-                </div>
-                <button class="movies-list__movies_buttons" (click)="selectMovie()"> avaliar </button>
-            </div>
-        </div>
-        <div class="movies-list__movie_container">
-            <div class="movies-list__movies_image">
-                *****//image//*****
-            </div>
-            <div class="movies-list__movie_datas">
-                <div class="movies-list__movies_title">
-                    *****//title//*****
-                </div>
-                <div class="movies-list__movies_rating">
-                    <span>ratting</span>
-                    <div class="movies-list__ratting">
-                        <input type="radio" id="star5" name="rate" value="5" [checked]="false" disabled />
-                        <label for="star5" title="text">5 stars</label>
-                        <input type="radio" id="star4" name="rate" value="4" [checked]="false" disabled />
-                        <label for="star4" title="text">4 stars</label>
-                        <input type="radio" id="star3" name="rate" value="3" [checked]="false" disabled />
-                        <label for="star3" title="text">3 stars</label>
-                        <input type="radio" id="star2" name="rate" value="2" [checked]="false" disabled />
-                        <label for="star2" title="text">2 stars</label>
-                        <input type="radio" id="star1" name="rate" value="1" [checked]="false" disabled />
-                        <label for="star1" title="text">1 star</label>
-                    </div>
-                </div>
-                <button class="movies-list__movies_buttons" (click)="selectMovie()"> avaliar </button>
-            </div>
-        </div>
-        <div class="movies-list__movie_container">
-            <div class="movies-list__movies_image">
-                *****//image//*****
-            </div>
-            <div class="movies-list__movie_datas">
-                <div class="movies-list__movies_title">
-                    *****//title//*****
-                </div>
-                <div class="movies-list__movies_rating">
-                    <span>ratting</span>
-                    <div class="movies-list__ratting">
-                        <input type="radio" id="star5" name="rate" value="5" [checked]="false" disabled />
-                        <label for="star5" title="text">5 stars</label>
-                        <input type="radio" id="star4" name="rate" value="4" [checked]="false" disabled />
-                        <label for="star4" title="text">4 stars</label>
-                        <input type="radio" id="star3" name="rate" value="3" [checked]="false" disabled />
-                        <label for="star3" title="text">3 stars</label>
-                        <input type="radio" id="star2" name="rate" value="2" [checked]="false" disabled />
-                        <label for="star2" title="text">2 stars</label>
-                        <input type="radio" id="star1" name="rate" value="1" [checked]="false" disabled />
-                        <label for="star1" title="text">1 star</label>
+                        <input type="radio" id="{{movie.title}}-star5" name="{{movie.title}}-rate" value="5" [checked]="ratting(5, movie.score, movie.title)" disabled />
+                        <label for="{{movie.title}}-star5" title="text">5 stars</label>
+                        <input type="radio" id="{{movie.title}}-star4" name="{{movie.title}}-rate" value="4" [checked]="ratting(4, movie.score, movie.title)" disabled />
+                        <label for="{{movie.title}}-star4" title="text">4 stars</label>
+                        <input type="radio" id="{{movie.title}}-star3" name="{{movie.title}}-rate" value="3" [checked]="ratting(3, movie.score, movie.title)" disabled />
+                        <label for="{{movie.title}}-star3" title="text">3 stars</label>
+                        <input type="radio" id="{{movie.title}}-star2" name="{{movie.title}}-rate" value="2" [checked]="ratting(2, movie.score, movie.title)" disabled />
+                        <label for="{{movie.title}}-star2" title="text">2 stars</label>
+                        <input type="radio" id="{{movie.title}}-star1" name="{{movie.title}}-rate" value="1" [checked]="ratting(1, movie.score, movie.title)" disabled />
+                        <label for="{{movie.title}}-star1" title="text">1 star</label>
                     </div>
                 </div>
                 <button class="movies-list__movies_buttons" (click)="selectMovie()"> avaliar </button>

@@ -1,0 +1,42 @@
+import { Injectable} from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders }from '@angular/common/http';
+import { catchError, tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
+import { Movie, MoviePage } from '../interfaces/movie';
+import { MessageService } from 'src/message.service';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class Requests {
+  url = environment.baseUrl;
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json' })
+  };
+
+  constructor(private http: HttpClient,
+    private messageService: MessageService ) { }
+
+  getAllMovies(page: number) : Observable<MoviePage> {
+    return this.http.get<MoviePage>(`${this.url}/movies?size=8&page=${page}`).pipe(tap(_ => this.log('all Movies')), catchError(this.handleError<MoviePage>('getAllMovies')));
+  }
+
+  getMovieById(id: number) : Observable<Movie> {
+    return this.http.get<Movie>(`${this.url}/movie/${id}`).pipe(tap(_ => this.log(`Movie id ${id}`)), catchError(this.
+      handleError<Movie>('getMovieById')))
+  }
+
+  private handleError<T>(operation: string, result?: T): any {
+    return(error: any): Observable<T> => {
+      console.error(error);
+      this.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
+  }
+
+  private log(message: string): void {
+    this.messageService.add(`${message}`);
+  }
+}
