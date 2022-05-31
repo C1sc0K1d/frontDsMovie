@@ -37,6 +37,18 @@
     box-shadow: 0 transparent;
 }
 
+.movies-list__navigate_butons:disabled {
+    color: gray;
+    background-color: darkgray;
+    border: 1px solid gray;
+}
+
+.movies-list__navigate_butons:disabled:hover {
+    transform: scale(1);
+    box-shadow: 0px 0px 0px black;
+    cursor: default;
+}
+
 .movies-list__page_number {
     color: #4D41C0;
     font-size: 12px;
@@ -86,6 +98,7 @@
 
 .movies-list__image {
     width: 34.5%;
+    height: 100%;
 }
 
 .movies-list__movie_datas {

@@ -20,11 +20,11 @@ export class Requests {
     private messageService: MessageService ) { }
 
   getAllMovies(page: number) : Observable<MoviePage> {
-    return this.http.get<MoviePage>(`${this.url}/movies?size=8&page=${page}`).pipe(tap(_ => this.log('all Movies')), catchError(this.handleError<MoviePage>('getAllMovies')));
+    return this.http.get<MoviePage>(`${this.url}/movies?size=8&page=${page}`).pipe(tap(), catchError(this.handleError<MoviePage>('getAllMovies')));
   }
 
   getMovieById(id: number) : Observable<Movie> {
-    return this.http.get<Movie>(`${this.url}/movie/${id}`).pipe(tap(_ => this.log(`Movie id ${id}`)), catchError(this.
+    return this.http.get<Movie>(`${this.url}/movies/${id}`).pipe(tap(), catchError(this.
       handleError<Movie>('getMovieById')))
   }
 

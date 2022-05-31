@@ -1,11 +1,11 @@
 <div class="movie__container">
     <div class="movie__card">
         <div class="movie__picture">
-            **//picture//**
+            <img class="movie__image" src="{{movie.image}}" alt="{{movie.title}}">
         </div>
         <div class="movie__infos">
-            <span>**//title//**</span>
-            <span>**//desc//**</span>
+            <span class="movie__title">{{ movie.title }}</span>
+            <span>{{ movie.description }}</span>
         </div>
         <div class="movie__inputs">
             <div class="movie__email_input">
@@ -17,31 +17,56 @@
                     <span>Informe sua avaliação</span>
                 </div>
                 <div style="justify-content: space-around;">
-                    <input type="radio" id="one" name="rating" value="1">
-                    <label for="one">1</label>
-                    <input type="radio" id="two" name="rating" value="2">
-                    <label for="two">2</label>
-                    <input type="radio" id="three" name="rating" value="3">
-                    <label for="three">3</label>
-                    <input type="radio" id="four" name="rating" value="4">
-                    <label for="four">4</label>
-                    <input type="radio" id="five" name="rating" value="5">
-                    <label for="five">5</label>
-                    <input type="radio" id="six" name="rating" value="6">
-                    <label for="six">6</label>
-                    <input type="radio" id="seven" name="rating" value="7">
-                    <label for="seven">7</label>
-                    <input type="radio" id="eight" name="rating" value="8">
-                    <label for="eight">8</label>
-                    <input type="radio" id="nine" name="rating" value="9">
-                    <label for="nine">9</label>
-                    <input type="radio" id="ten" name="rating" value="10">
-                    <label for="ten">10</label>
+                    <div>
+                        <input type="radio" id="zero" name="rating" value="0">
+                        <label for="zero">0</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="one" name="rating" value="0.5">
+                        <label for="one">1</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="two" name="rating" value="1">
+                        <label for="two">2</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="three" name="rating" value="1.5">
+                        <label for="three">3</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="four" name="rating" value="2">
+                        <label for="four">4</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="five" name="rating" value="2.5">
+                        <label for="five">5</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="six" name="rating" value="3">
+                        <label for="six">6</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="seven" name="rating" value="3.5">
+                        <label for="seven">7</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="eight" name="rating" value="4">
+                        <label for="eight">8</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="nine" name="rating" value="4.5">
+                        <label for="nine">9</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="ten" name="rating" value="5">
+                        <label for="ten">10</label>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="movie__buttons">
-            <button class="movie__button">salvar</button><button class="movie__button">cancelar</button>
+            <button class="movie__button">salvar</button>
+            <button class="movie__button" (click)="goBack()">cancelar</button>
         </div>
     </div>
 </div>

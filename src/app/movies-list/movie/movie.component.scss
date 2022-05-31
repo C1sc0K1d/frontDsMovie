@@ -28,6 +28,11 @@
     color: white;
 }
 
+.movie__image {
+    width: 49%;
+    height: 100%;
+}
+
 .movie__infos {
     display: flex;
     align-items: center;
@@ -35,6 +40,13 @@
     margin: auto;
     padding: 0 20px;
     word-break: break-all;
+}
+
+.movie__title {
+    font-size: 24px;
+    color: #4D41C0;
+    font-weight: bolder;
+    padding-bottom: 12px;
 }
 
 .movie__inputs {
@@ -96,8 +108,13 @@
         text-align: left;
     }
     label {
-        font-size: 16px;
+        font-size: 18px;
         margin-right: 10px;
+        padding-left: 8px;
+    }
+    input {
+        width: 12px;
+        height: 12px;
     }
 }
 
@@ -107,13 +124,14 @@
     justify-content: center;
     flex-direction: column;
     padding: 0 20px;
-    margin: auto;
-    height: auto;
+    margin-bottom: auto;
+    height: 14%;
+    width: 100%;
 }
 
 .movie__button {
-    width: 180px;
-    height: 40px;
+    width: 40%;
+    height: 35%;
     border-radius: 4px;
     background-color: #4D41C0;
     color: white;
