@@ -5,6 +5,7 @@ import { catchError, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Movie, MoviePage } from '../interfaces/movie';
 import { MessageService } from 'src/message.service';
+import { ScoreRequest } from '../requests/score-request';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,10 @@ export class Requests {
   getMovieById(id: number) : Observable<Movie> {
     return this.http.get<Movie>(`${this.url}/movies/${id}`).pipe(tap(), catchError(this.
       handleError<Movie>('getMovieById')))
+  }
+
+  setScore(score: ScoreRequest) : Observable<any> {
+    return this.http.put(`${this.url}/score`, score, this.httpOptions).pipe(tap(), catchError(this.handleError<any>('setScore')));
   }
 
   private handleError<T>(operation: string, result?: T): any {
